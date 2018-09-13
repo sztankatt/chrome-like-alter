@@ -1,19 +1,9 @@
 function getLikeText() {
-    var random = Math.random();
-    if (random < 0.5) {
-        return 'I\'ll allow it';
-    } else {
-        return 'I validate your existence';
-    }
+	return 'Alright';
 }
 
 function getUnlikeText() {
-    var random = Math.random();
-    if (random < 0.5) {
-        return 'I disallow it';
-    } else {
-        return 'I invalidate your existence';
-    }
+        return 'Not alright'; 
 }
 
 // Returns null if the text should not be replaced
@@ -27,10 +17,10 @@ function getReplacementText(originalText) {
     }
     // Main post like count
     if (originalText === ' likes this.') {
-        return ' allows this.';
+        return ' says it\'s alright.';
     }
     if (originalText === ' like this.') {
-        return ' allow this.';
+        return ' says it\'s not alright.';
     }
     return null;
 }
